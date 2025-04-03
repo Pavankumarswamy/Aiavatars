@@ -283,7 +283,7 @@ IMAGE_HEIGHT = 500
 IMAGE_WIDTH = 500
 
 def inference_tab2():
-    default_weight = "logs\\CBN_AI_FINAL\\modi_60e_360s_best_epoch.pth"
+    default_weight = "logs/CBN_AI_FINAL/modi_60e_360s_best_epoch.pth"
 
     with gr.Column():
         with gr.Row():
