@@ -392,9 +392,7 @@ def inference_tab2():
                 formant_shifting = gr.Checkbox(label=i18n("Formant Shifting"), value=False, interactive=True)
                 post_process = gr.Checkbox(label=i18n("Post-Process"), value=False, interactive=True)
                 with gr.Row(visible=False) as formant_row:
-                    formant_preset = gr.Dropdown(label=i18n("Browse presets for formanting"),
-                                                 choices=list_json_files(FORMANTSHIFT_DIR), interactive=True)
-                    formant_refresh_button = gr.Button(value="Refresh")
+                    
                 formant_qfrency = gr.Slider(value=1.0, label=i18n("Quefrency for formant shifting"), minimum=0.0,
                                             maximum=16.0, step=0.1, visible=False, interactive=True)
                 formant_timbre = gr.Slider(value=1.0, label=i18n("Timbre for formant shifting"), minimum=0.0,
@@ -728,10 +726,7 @@ def inference_tab2():
 
         autotune.change(fn=toggle_visible, inputs=[autotune], outputs=[autotune_strength])
         clean_audio.change(fn=toggle_visible, inputs=[clean_audio], outputs=[clean_strength])
-        formant_shifting.change(fn=toggle_visible_formant_shifting, inputs=[formant_shifting],
-                                outputs=[formant_row, formant_preset, formant_refresh_button, formant_qfrency,
-                                         formant_timbre])
-        formant_refresh_button.click(fn=refresh_formant, inputs=[], outputs=[formant_preset])
+        
         formant_preset.change(fn=update_sliders_formant, inputs=[formant_preset],
                               outputs=[formant_qfrency, formant_timbre])
         post_process.change(fn=post_process_visible, inputs=[post_process],
