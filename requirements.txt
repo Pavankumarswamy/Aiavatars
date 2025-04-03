@@ -1,4 +1,4 @@
-
+noisereduce==3.0.3
 edge-tts==6.1.9        # For text-to-speech (inference.py)
 google-generativeai==0.8.4  # For Google Generative AI (inference.py)
 SpeechRecognition==3.14.2  # For speech recognition (inference.py)
