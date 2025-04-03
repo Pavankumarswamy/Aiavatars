@@ -391,7 +391,7 @@ def inference_tab2():
                                            interactive=True, visible=False)
                 formant_shifting = gr.Checkbox(label=i18n("Formant Shifting"), value=False, interactive=True)
                 post_process = gr.Checkbox(label=i18n("Post-Process"), value=False, interactive=True)
-                with gr.Row(visible=False) as formant_row:
+                
                     
                 formant_qfrency = gr.Slider(value=1.0, label=i18n("Quefrency for formant shifting"), minimum=0.0,
                                             maximum=16.0, step=0.1, visible=False, interactive=True)
