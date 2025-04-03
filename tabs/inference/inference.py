@@ -718,12 +718,6 @@ def inference_tab():
 
         autotune.change(fn=toggle_visible, inputs=[autotune], outputs=[autotune_strength])
         clean_audio.change(fn=toggle_visible, inputs=[clean_audio], outputs=[clean_strength])
-        formant_shifting.change(fn=toggle_visible_formant_shifting, inputs=[formant_shifting],
-                                outputs=[formant_row, formant_preset, formant_refresh_button, formant_qfrency,
-                                         formant_timbre])
-        formant_refresh_button.click(fn=refresh_formant, inputs=[], outputs=[formant_preset])
-        formant_preset.change(fn=update_sliders_formant, inputs=[formant_preset],
-                              outputs=[formant_qfrency, formant_timbre])
         post_process.change(fn=post_process_visible, inputs=[post_process],
                             outputs=[reverb, pitch_shift, limiter, gain, distortion, chorus, bitcrush, clipping,
                                      compressor, delay])
