@@ -1,12 +1,12 @@
-gradio==5.5.0          # Core dependency for your Gradio app
-gTTS==2.5.4            # Text-to-speech (Linux-compatible)
-edge-tts==6.1.9        # Alternative TTS option
-pydub==0.25.1          # Audio manipulation
-ffmpeg-python==0.2.0   # Audio processing with ffmpeg
-numpy==1.23.5          # Common for audio/ML tasks
-protobuf==3.20.3       # Compatible with Spaces' "protobuf<4" requirement
-requests==2.31.0       # For HTTP requests (used by gTTS/edge-tts)
-aiohttp==3.11.10       # Async HTTP (used by edge-tts)
+gradio==5.5.0          # For the Gradio UI
+edge-tts==6.1.9        # For text-to-speech (edge_tts)
+google-generativeai==0.8.4  # For Google Generative AI (genai)
+SpeechRecognition==3.14.2  # For speech recognition (speech_recognition)
+torch==2.3.1           # For PyTorch (torch)
+soundfile==0.12.1      # For audio file handling (soundfile)
+numpy==1.23.5          # For numerical operations (np)
+regex==2024.11.6       # For regex operations (regex)
+aiohttp==3.11.10       # Async HTTP for edge-tts
 aiosignal==1.3.1       # Dependency for aiohttp
 async-timeout==5.0.1   # Dependency for aiohttp
 attrs==24.2.0          # Dependency for aiohttp
@@ -16,3 +16,11 @@ frozenlist==1.5.0      # Dependency for aiohttp
 idna==3.10             # Dependency for requests
 multidict==6.1.0       # Dependency for aiohttp
 yarl==1.18.3           # Dependency for aiohttp
+requests==2.31.0       # For HTTP requests (used by google-generativeai)
+google-api-core==2.24.2  # Dependency for google-generativeai
+google-auth==2.38.0    # Dependency for google-generativeai
+googleapis-common-protos==1.69.2  # Dependency for google-api-core
+protobuf==3.20.3       # Compatible with Spaces' "protobuf<4" requirement
+pyasn1==0.6.1          # Dependency for google-auth
+pyasn1-modules==0.4.2  # Dependency for google-auth
+rsa==4.9               # Dependency for google-auth
