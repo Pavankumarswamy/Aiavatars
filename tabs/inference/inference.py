@@ -284,7 +284,7 @@ IMAGE_HEIGHT = 500
 IMAGE_WIDTH = 500
 
 def inference_tab():
-    default_weight = "logs\\CBN_AI_FINAL\\CBN_AI_FINAL_447e_1788s_best_epoch.pth"
+    default_weight = "logs/CBN_AI_FINAL/CBN_AI_FINAL_447e_1788s_best_epoch.pth"
 
     with gr.Column():
         with gr.Row():
