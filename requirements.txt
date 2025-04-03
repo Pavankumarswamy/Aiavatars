@@ -98,7 +98,6 @@ python-dateutil==2.9.0.post0
 python-multipart==0.0.12
 pyttsx3==2.98
 pytz==2024.2
-pywin32==306  # Changed from 310 to 306 (latest valid version)
 PyYAML==6.0.2
 regex==2024.11.6
 requests==2.31.0
